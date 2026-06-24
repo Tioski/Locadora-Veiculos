@@ -84,8 +84,8 @@ Gerencia cada locação com:
 ## 💾 Estrutura de Pastas
 
 - `src/` - Código-fonte Java
-- `lib/` - Dependências externas (se houver)
-- `bin/` - Arquivos compilados (gerado automaticamente)
+- `lib/` - Dependências externas
+- `bin/` - Arquivos compilados
 
 ## 📝 Requisitos
 
@@ -98,5 +98,3 @@ Gerencia cada locação com:
 - Adicionar sistema de cobranças
 - Interface gráfica (GUI)
 - Relatórios de rentabilidade
-
-
