@@ -2,13 +2,13 @@ import java.time.LocalDate;
 
 public class Locacao {
     private Cliente cliente;
-    private Veiculo veiculo;
+    private Alugavel veiculo;
     private LocalDate dataLocacao;
     private LocalDate dataDevolucao;
     private boolean ativa;
     private double quilometragemRodada;
 
-    public Locacao(Cliente cliente, Veiculo veiculo) {
+    public Locacao(Cliente cliente, Alugavel veiculo) {
         this.cliente = cliente;
         this.veiculo = veiculo;
         this.dataLocacao = LocalDate.now();
@@ -19,7 +19,7 @@ public class Locacao {
         return cliente;
     }
 
-    public Veiculo getVeiculo() {
+    public Alugavel getVeiculo() {
         return veiculo;
     }
 

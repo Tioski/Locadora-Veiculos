@@ -1,4 +1,4 @@
-public abstract class Veiculo {
+public abstract class Veiculo implements Alugavel {
     private String marca;
     private String modelo;
     private String placa;
@@ -48,7 +48,6 @@ public abstract class Veiculo {
     public void setAno(int ano) {
         this.ano = ano;
     }
-
     public double getQuilometragem() {
         return quilometragem;
     }
@@ -59,6 +58,9 @@ public abstract class Veiculo {
 
     public boolean isDisponivel() {
         return disponivel;
+    }
+    public void buzina(){
+        System.out.println("Biiiiii");
     }
 
     public void setDisponivel(boolean disponivel) {

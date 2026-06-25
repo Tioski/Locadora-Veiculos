@@ -42,6 +42,13 @@ public class Locadora {
                 case 7:
                     listarLocacoes();
                     break;
+                case 8:
+                    System.out.println("Buzina do veículo:");
+                    for (Veiculo veiculo : veiculos) {
+                        System.out.printf("%s %s: ", veiculo.getMarca(), veiculo.getModelo());
+                        veiculo.buzina();
+                    }
+                    break;
                 case 0:
                     System.out.println("Saindo...");
                     break;
@@ -62,6 +69,7 @@ public class Locadora {
         System.out.println("5 - Alugar Veículo");
         System.out.println("6 - Devolver Veículo");
         System.out.println("7 - Listar Locações");
+        System.out.println("8 - Buzina do veículo");
         System.out.println("0 - Sair");
     }
 

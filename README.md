@@ -19,12 +19,55 @@ LocadoraVeiculos/
 │   ├── Locadora.java          # Classe principal com menu interativo
 │   ├── Cliente.java            # Entidade de Cliente
 │   ├── Veiculo.java            # Classe abstrata base para veículos
+│   ├── Alugavel.java           # Interface de aluguel para veículos
 │   ├── Carro.java              # Implementação de Carro
 │   ├── Moto.java               # Implementação de Moto
 │   ├── Caminhonete.java        # Implementação de Caminhonete
 │   └── Locacao.java            # Entidade de Locação
 ├── lib/                        # Dependências externas
 └── README.md                   # Este arquivo
+```
+
+## 📐 Diagrama de Classes
+
+```
++-------------------+       +----------------+
+|     Alugavel      |<------|     Veiculo    |
+|-------------------|       |  (abstract)    |
+| +isDisponivel()   |       |----------------|
+| +alugar()         |       | -marca         |
+| +devolver(...)    |       | -modelo        |
+| +getTipo()        |       | -placa         |
++-------------------+       | -ano           |
+                            | -quilometragem |
+                            | -disponivel    |
+                            |----------------|
+                            | +getTipo()     |
+                            | +getMarca()    |
+                            | +alugar()      |
+                            | +devolver(...) |
+                            +----------------+
+                                   /|\
+                                    |
+        +----------------+ +----------------+ +-------------------+
+        |     Carro      | |     Moto       | |   Caminhonete     |
+        |----------------| |----------------| |-------------------|
+        | -portas        | | -cilindradas   | | -capacidadeCarga |
+        | -arCondicionado| | -temBau       | | -temTracao4x4    |
+        +----------------+ +----------------+ +-------------------+
+
++-------------------+       +----------------+
+|    Cliente        |       |    Locacao     |
+|-------------------|       |----------------|
+| -nome             |       | -cliente       |
+| -cpf              |       | -veiculo       |
+| -endereco         |       | -dataLocacao   |
+| -telefone         |       | -dataDevolucao |
+| -email            |       | -ativa         |
++-------------------+       | -quilometragem |
+                            |----------------|
+                            | +registrarDevolucao(...) |
+                            +----------------+
 ```
 
 ## 🚀 Como Usar
